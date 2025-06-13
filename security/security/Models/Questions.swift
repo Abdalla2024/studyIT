@@ -11,6 +11,7 @@ import MongoDB
 struct Question: Codable, Identifiable {
     var _id: ObjectId
     var question: String
+    var section: ObjectId  // Reference to the section's unique id
     
     var id: String {
         return _id.hexString
@@ -19,6 +20,7 @@ struct Question: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case _id
         case question
+        case section
     }
 }
 
