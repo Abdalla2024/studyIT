@@ -12,6 +12,7 @@ struct Definition: Codable, Identifiable {
     var _id: ObjectId
     var term: String
     var definition: String
+    var section: ObjectId  // Reference to the section's unique id
     
     var id: String {
         return _id.hexString
@@ -21,6 +22,7 @@ struct Definition: Codable, Identifiable {
         case _id
         case term
         case definition
+        case section
     }
 }
 
