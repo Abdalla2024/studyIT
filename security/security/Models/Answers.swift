@@ -9,7 +9,7 @@ import Foundation
 import MongoDB
 
 struct Answer: Codable, Identifiable {
-    var _id: ObjectId
+    var _id: UUID = UUID()
     var question: ObjectId  // Reference to the question's unique id
     var answer: String
     var isCorrect: Bool
