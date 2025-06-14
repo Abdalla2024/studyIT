@@ -9,7 +9,7 @@ import Foundation
 import MongoDB
 
 struct Definition: Codable, Identifiable {
-    var _id: UUID = UUID()
+    var _id: ObjectId
     var term: String
     var definition: String
     var section: ObjectId  // Reference to the section's unique id
